@@ -11,18 +11,15 @@ function App() {
   };
 
   return (
-    <main>
-      <h1>Calculator</h1>
+    <div class="container">
       <button onClick={handleClick}>
-        {isExpanded ? "Show Basic" : "Show Scientific"}
+        Show {isExpanded ? "Basic" : "Scientific"}
       </button>
-      <Display
-        isExpanded={isExpanded}
-        expression="1 + 2 + 3"
-        result="6"
-      ></Display>
-      <Keypad isExpanded={isExpanded}></Keypad>
-    </main>
+      <main class={isExpanded ? "expanded" : ""}>
+        <Display expression="1 + 2 + 3" result="6"></Display>
+        <Keypad></Keypad>
+      </main>
+    </div>
   );
 }
 

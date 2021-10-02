@@ -1,71 +1,56 @@
 main {
-  width: 600px;
+  width: 400px;
   border-radius: 8px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   overflow: hidden;
+  transition: width 250ms ease-in-out;
 }
 
-main > button {
-  background: salmon;
-  /* color: white; */
-  outline: none;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  margin: 1rem 0;
+main.expanded {
+  width: 700px;
 }
 
-main h1 {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container button {
+  width: 150px;
+  background: black;
   color: white;
 }
 
 .display {
-  width: 400px;
-  background: white;
+  background: #f9f9f9;
   height: 20%;
   text-align: right;
-  padding: 1.5rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: width 250ms linear;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-.display.expanded {
-  width: 600px;
+  padding: 1rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .display p {
   color: #797979;
+  font-size: 2.5rem;
 }
 
-.output {
-  font-size: 1.5rem;
+.display .output {
+  font-size: 2rem;
+  opacity: 0.75;
 }
 
 .keypad {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 350px;
   height: 400px;
   cursor: pointer;
+  user-select: none;
   /* background-image: url("./bg.jpg"); // use this for rendering images as background */
-}
-
-.scientific {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 100%;
-  width: 0px;
-  overflow: hidden;
-  transition: width 250ms linear;
-}
-
-.scientific.expanded {
-  width: 200px;
 }
 
 .btn {
@@ -73,13 +58,16 @@ main h1 {
   height: 25%;
   display: grid;
   place-items: center;
-  color: white;
+  color: #f9f9f9;
   font-size: 1.25rem;
   background: #424242;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.7;
+}
+.btn:active {
+  border: solid 1px dimgray;
 }
 
 [data-attr="AC"],
@@ -91,4 +79,20 @@ main h1 {
   background: #626262;
   height: calc(100% / 6);
   color: #c7c8c8;
+}
+
+[data-attr="sin"],
+[data-attr="ln"],
+[data-attr="pi"],
+[data-attr="("],
+[data-attr="cos"],
+[data-attr="log"],
+[data-attr="e"],
+[data-attr=")"],
+[data-attr="tan"],
+[data-attr="!"],
+[data-attr="^"],
+[data-attr="√"] {
+  color: #465d55;
+  background: #1ae8b5;
 }

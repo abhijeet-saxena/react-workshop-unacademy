@@ -1,10 +1,10 @@
 import "../App.css";
 
 export default function Display(props) {
-  const { expression, result, isExpanded } = props;
+  const { expression, result } = props;
 
   return (
-    <div className={isExpanded ? "display expanded" : "display"}>
+    <div className="display">
       <p>{expression}</p>
       <p class="output">{result}</p>
     </div>
