@@ -1,0 +1,94 @@
+main {
+  width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+main > button {
+  background: salmon;
+  /* color: white; */
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+main h1 {
+  color: white;
+}
+
+.display {
+  width: 400px;
+  background: white;
+  height: 20%;
+  text-align: right;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 250ms linear;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.display.expanded {
+  width: 600px;
+}
+
+.display p {
+  color: #797979;
+}
+
+.output {
+  font-size: 1.5rem;
+}
+
+.keypad {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 350px;
+  height: 400px;
+  cursor: pointer;
+  /* background-image: url("./bg.jpg"); // use this for rendering images as background */
+}
+
+.scientific {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 0px;
+  overflow: hidden;
+  transition: width 250ms linear;
+}
+
+.scientific.expanded {
+  width: 200px;
+}
+
+.btn {
+  width: 100px;
+  height: 25%;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 1.25rem;
+  background: #424242;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+[data-attr="AC"],
+[data-attr="CE"],
+[data-attr="/"],
+[data-attr="*"],
+[data-attr="+"],
+[data-attr="-"] {
+  background: #626262;
+  height: calc(100% / 6);
+  color: #c7c8c8;
+}
