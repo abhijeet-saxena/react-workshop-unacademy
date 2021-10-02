@@ -6,7 +6,7 @@ export default function Display(props) {
   return (
     <div className="display">
       <p>{expression}</p>
-      <p class="output">{result}</p>
+      <p className="output">{result}</p>
     </div>
   );
 }

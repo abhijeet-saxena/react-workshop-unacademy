@@ -4,18 +4,18 @@ import Display from "./components/Display";
 import Keypad from "./components/Keypad";
 
 function App() {
-  const [isExpanded, setExpanded] = useState(true);
+  const [isExpanded, setExpanded] = useState(false);
 
   const handleClick = () => {
     setExpanded(!isExpanded);
   };
 
   return (
-    <div class="container">
+    <div className="container">
       <button onClick={handleClick}>
         Show {isExpanded ? "Basic" : "Scientific"}
       </button>
-      <main class={isExpanded ? "expanded" : ""}>
+      <main className={isExpanded ? "expanded" : ""}>
         <Display expression="1 + 2 + 3" result="6"></Display>
         <Keypad></Keypad>
       </main>

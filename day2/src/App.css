@@ -26,7 +26,7 @@ main.expanded {
 
 .display {
   background: #f9f9f9;
-  height: 20%;
+  height: 120px;
   text-align: right;
   padding: 1rem;
   border-top-left-radius: 4px;
@@ -70,29 +70,29 @@ main.expanded {
   border: solid 1px dimgray;
 }
 
-[data-attr="AC"],
-[data-attr="CE"],
-[data-attr="/"],
-[data-attr="*"],
-[data-attr="+"],
-[data-attr="-"] {
+[data-input="AC"],
+[data-input="CE"],
+[data-input="/"],
+[data-input="*"],
+[data-input="+"],
+[data-input="-"] {
   background: #626262;
   height: calc(100% / 6);
   color: #c7c8c8;
 }
 
-[data-attr="sin"],
-[data-attr="ln"],
-[data-attr="pi"],
-[data-attr="("],
-[data-attr="cos"],
-[data-attr="log"],
-[data-attr="e"],
-[data-attr=")"],
-[data-attr="tan"],
-[data-attr="!"],
-[data-attr="^"],
-[data-attr="√"] {
+[data-input="sin"],
+[data-input="ln"],
+[data-input="π"],
+[data-input="("],
+[data-input="cos"],
+[data-input="log"],
+[data-input="e"],
+[data-input=")"],
+[data-input="tan"],
+[data-input="!"],
+[data-input="^"],
+[data-input="√"] {
   color: #465d55;
   background: #1ae8b5;
 }

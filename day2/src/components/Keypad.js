@@ -22,7 +22,7 @@ export default function Keypad() {
     "-",
     "sin",
     "ln",
-    "pi",
+    "π",
     "(",
     "cos",
     "log",
@@ -35,7 +35,7 @@ export default function Keypad() {
   ];
 
   return (
-    <div class="keypad">
+    <div className="keypad">
       {keys.map((item) => {
         return <Button key={item} value={item}></Button>;
       })}
