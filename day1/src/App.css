@@ -1,0 +1,9 @@
+/* These are component level styles. Will b eapplied wherever imported */
+
+.underline {
+  display: inline-block;
+  padding: 1rem;
+  border: dashed 2px salmon;
+  margin-bottom: 2rem;
+  text-align: center;
+}
