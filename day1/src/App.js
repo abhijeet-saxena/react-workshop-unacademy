@@ -8,8 +8,8 @@ function App() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
       <h1 className="underline">App Component</h1>
-      <CC color="teal"></CC>
-      <FC text="This text is coming as props from <App>"></FC>
+      {/* <CC color="teal"></CC>
+      <FC text="This text is coming as props from <App>"></FC> */}
       <Counter />
     </div>
   );

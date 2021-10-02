@@ -6,23 +6,29 @@ export default function Counter() {
   // First Element stores the value, second element is used to update value
   const [count, setCount] = useState(0);
 
-  const increment = () => {
-    setCount(count + 1);
-  };
-
-  const decrement = () => {
-    if (count > 0) setCount(count - 1);
+  const handleClick = (diff) => {
+    console.log("calculating");
+    setCount(count + diff);
   };
 
   return (
     <main>
       <h2>Counter</h2>
       <p>{count}</p>
-      <button className="btn" onClick={increment}>
-        Increment
+      <button className="btn" onClick={() => handleClick(-1 * count)}>
+        Reset to 0
       </button>
-      <button className="btn" onClick={decrement}>
-        Decrement
+      <button className="btn" onClick={() => handleClick(1)}>
+        Increment by 1
+      </button>
+      <button className="btn" onClick={() => handleClick(-1)}>
+        Decrement by 1
+      </button>
+      <button className="btn" onClick={() => handleClick(2)}>
+        Increment by 2
+      </button>
+      <button className="btn" onClick={() => handleClick(-2)}>
+        Decrement by 2
       </button>
     </main>
   );
